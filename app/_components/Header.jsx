@@ -153,7 +153,7 @@ const Header = () => {
           <input type="text" placeholder="Search" className="outline-none" />
         </div>
       </div>
-      <div className="flex gap-5 items-center">
+      {/* <div className="flex gap-5 items-center">
         <Sheet>
           <SheetTrigger>
             <h2 className="flex gap-2 items-center text-lg">
@@ -191,30 +191,7 @@ const Header = () => {
             </SheetClose>
           </SheetContent>
         </Sheet>
-
-        {!isLogin ? (
-          <Link href="/signin">
-            <Button>Login</Button>
-          </Link>
-        ) : (
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <CircleUserRound className="bg-green-100 text-primary rounded-full p-2 h-12 w-12 cursor-pointer" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuLabel>My Account</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Profile</DropdownMenuItem>
-              <Link href={"/my-order"}>
-                <DropdownMenuItem>My Orders</DropdownMenuItem>
-              </Link>
-              <DropdownMenuItem onClick={() => onLogout()}>
-                Logout
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        )}
-      </div>
+      </div> */}
     </div>
   );
 };
