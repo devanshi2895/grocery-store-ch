@@ -132,10 +132,7 @@ const Header = () => {
               >
                 <DropdownMenuItem className="flex gap-4 items-center cursor-pointer">
                   <Image
-                    src={
-                      process.env.NEXT_PUBLIC_BACKEND_BASE_URL +
-                      cat?.attributes?.icon?.data?.attributes?.url
-                    }
+                    src={cat?.attributes?.icon?.data?.attributes?.url}
                     unoptimized={true}
                     alt="icon"
                     width={23}

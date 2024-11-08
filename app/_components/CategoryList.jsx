@@ -14,10 +14,7 @@ const CategoryList = ({ categories }) => {
             className="flex flex-col items-center bg-green-50 gap-2 p-4 rounded-lg group cursor-pointer hover:bg-green-200"
           >
             <Image
-              src={
-                process.env.NEXT_PUBLIC_BACKEND_BASE_URL +
-                cat?.attributes?.icon?.data?.attributes?.url
-              }
+              src={cat?.attributes?.icon?.data?.attributes?.url}
               unoptimized={true}
               alt="icon"
               width={50}

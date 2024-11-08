@@ -1,7 +1,8 @@
 const { default: axios } = require("axios");
 const axiosClient = axios.create({
   //baseURL: "https://inspiring-actor-5fe41d2def.strapiapp.com/api",
-  baseURL: "http://localhost:1337/api",
+  baseURL: "https://trusty-boot-3e9a61a1aa.strapiapp.com/api",
+  //baseURL: "http://localhost:1337/api",
 });
 
 const getCategory = () => axiosClient.get("/categories?populate=*");
