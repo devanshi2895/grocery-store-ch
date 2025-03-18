@@ -9,6 +9,8 @@ import { useState } from "react";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import { useEffect } from "react";
 import { engage } from "./_api/engage";
+import { ApolloProvider } from "@apollo/client";
+import client from "./_utils/apolloClient";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -74,9 +76,11 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <UpdateCartContext.Provider value={{ updateCart, setUpdateCart }}>
-          {showHeader && <Header />}
-          {children}
-          <Toaster />
+          <ApolloProvider client={client}>
+            {showHeader && <Header />}
+            {children}
+            <Toaster />
+          </ApolloProvider>
         </UpdateCartContext.Provider>
       </body>
     </html>
